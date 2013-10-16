@@ -6,6 +6,6 @@ JavaScript function to randomize all textual/input numbers on a screen and leave
 How to use:
 
 1.  Open a JS console.
-2.  Copy the contents of "sanitizr.js" and paste into console.
+2.  Copy the contents of "sanitizr.min.js" and paste into console.
 3.  Run.
 4.  Edit wording of data in the application by just clicking and retyping (contenteditable).
