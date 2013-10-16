@@ -11,9 +11,9 @@
     while(node = walker.nextNode()) {
         if (node.nodeValue != null && node.nodeValue.match(/\d/g)) {
             var len = node.nodeValue.length;
-            for (var j=0; j<len; j++)
+            for (var i = 0; i < len; ++i)
             {
-                var c = node.nodeValue.charAt(j);
+                var c = node.nodeValue.charAt(i);
                 if (c.match(/\d/g)) {
                     node.nodeValue = node.nodeValue.replace(c, ~~(Math.random() * 10));
                 }
@@ -22,12 +22,12 @@
     }
     
     // Replace all input values.
-    var nodeList = document.getElementsByTagName("input");
+    var nodeList = document.getElementsByTagName('input');
     for (var i = 0; i < nodeList.length; ++i) {
         var node = nodeList[i];
-        if (node.getAttribute("type") == "text" && node.value != null && node.value.match(/\d/g)) {
+        if (node.getAttribute('type') === 'text' && node.value != null && node.value.match(/\d/g)) {
             var len = node.value.length;
-            for (var j=0; j<len; j++)
+            for (var j = 0; j < len; ++j)
             {
                 var c = node.value.charAt(j);
                 if (c.match(/\d/g)) {
@@ -38,6 +38,9 @@
     }
     
     // Enable contenteditable for all elements.
-    $('*').attr('contenteditable','true');
+    var nodeList = document.getElementsByTagName('*');
+    for (var i = 0; i < nodeList.length; ++i) {
+        nodeList[i].setAttribute('contenteditable','true');
+    }
     
 })();
