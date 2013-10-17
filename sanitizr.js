@@ -19,7 +19,7 @@
     }
     
     // Replace all input values.
-    var nodeList = document.getElementsByTagName('input'), value;
+    var nodeList = document.getElementsByTagName('input');
     for (var i = 0; i < nodeList.length; ++i) {
         var node = nodeList[i];
         if ((node.getAttribute('type') === 'number' || node.getAttribute('type') === 'text') && node.value != null && node.value.match(/\d/)) {
